@@ -1,0 +1,37 @@
+# Django core
+Django==4.2.7
+djangorestframework==3.14.0
+
+# Database
+psycopg2-binary==2.9.9
+
+# Authentication & Authorization
+djangorestframework-simplejwt==5.3.0
+django-cors-headers==4.3.1
+
+# API documentation
+drf-spectacular==0.26.5
+
+# File handling
+Pillow==10.1.0
+django-storages==1.14.2
+
+# Date/time handling
+pytz==2023.3
+python-dateutil==2.8.2
+
+# Hebrew calendar support
+convertdate==2.4.0
+hijri-converter==2.3.1
+
+# Environment variables
+python-decouple==3.8
+
+# Validation
+django-phonenumber-field==7.2.0
+phonenumbers==8.13.25
+
+# Utilities
+requests==2.31.0
+celery==5.3.4  # For background tasks
+redis==5.0.1  # Message broker
