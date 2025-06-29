@@ -1,0 +1,41 @@
+{$DOMAIN:localhost} {
+    # API requests to Django
+    handle /api/* {
+        reverse_proxy django:8000
+    }
+    
+    # Django admin
+    handle /admin/* {
+        reverse_proxy django:8000
+    }
+    
+    # Static files from Django
+    handle /static/* {
+        root * /var/www
+        file_server
+    }
+    
+    # Media files from Django
+    handle /media/* {
+        root * /var/www
+        file_server
+    }
+    
+    # Everything else to Vue.js SPA
+    handle {
+        root * /var/www/html
+        try_files {path} /index.html
+        file_server
+    }
+    
+    # Enable compression
+    encode gzip
+    
+    # Security headers
+    header {
+        X-Content-Type-Options nosniff
+        X-Frame-Options DENY
+        X-XSS-Protection "1; mode=block"
+        Referrer-Policy strict-origin-when-cross-origin
+    }
+}

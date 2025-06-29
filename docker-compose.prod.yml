@@ -1,0 +1,30 @@
+version: '3.8'
+
+# Production overrides
+services:
+  django:
+    build:
+      dockerfile: ../docker/django/Dockerfile.prod
+    environment:
+      - DJANGO_DEBUG=false
+    restart: unless-stopped
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py collectstatic --noinput &&
+             gunicorn core.wsgi:application --bind 0.0.0.0:8000 --workers 3"
+
+  vue:
+    build:
+      dockerfile: ../docker/vue/Dockerfile.prod
+    restart: unless-stopped
+    command: >
+      sh -c "npm run build &&
+             cp -r dist/* /app/dist/"
+
+  caddy:
+    restart: unless-stopped
+    profiles:
+      - '' # Enable by default in prod
+
+  postgres:
+    restart: unless-stopped

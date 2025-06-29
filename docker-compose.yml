@@ -1,0 +1,87 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  django:
+    build:
+      context: ./server
+      dockerfile: ../docker/django/Dockerfile.${ENVIRONMENT:-dev}
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+      - DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY}
+      - DJANGO_DEBUG=${DJANGO_DEBUG:-true}
+      - ALLOWED_HOSTS=${ALLOWED_HOSTS}
+      - ENVIRONMENT=${ENVIRONMENT:-dev}
+    volumes:
+      - ./server:/app
+      - django_static:/app/staticfiles
+      - django_media:/app/media
+    ports:
+      - '8000:8000'
+    depends_on:
+      postgres:
+        condition: service_healthy
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py collectstatic --noinput &&
+             python manage.py runserver 0.0.0.0:8000"
+
+  vue:
+    build:
+      context: ./client
+      dockerfile: ../docker/vue/Dockerfile.${ENVIRONMENT:-dev}
+    environment:
+      - VITE_API_URL=${VITE_API_URL:-http://localhost:8000}
+      - ENVIRONMENT=${ENVIRONMENT:-dev}
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+      - vue_dist:/app/dist
+    ports:
+      - '3000:3000'
+    depends_on:
+      - django
+
+  caddy:
+    image: caddy:2-alpine
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - ./docker/caddy/Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
+      - vue_dist:/var/www/html
+      - django_static:/var/www/static
+      - django_media:/var/www/media
+    environment:
+      - DOMAIN=${DOMAIN:-localhost}
+      - ENVIRONMENT=${ENVIRONMENT:-dev}
+    depends_on:
+      - django
+      - vue
+    profiles:
+      - prod
+
+volumes:
+  postgres_data:
+  django_static:
+  django_media:
+  vue_dist:
+  caddy_data:
+  caddy_config:
