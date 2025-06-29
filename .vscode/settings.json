@@ -1,0 +1,12 @@
+{
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "package.json": "package-lock.json, tsconfig.json, tsconfig.*.json, env.d.ts, vite.config.*, pnpm*, .yarnrc*, yarn*, .eslint*, eslint*, .oxlint*, oxlint*, .prettier*, prettier*, .editorconfig, jsconfig*, vitest.config.*, cypress.config.*, playwright.config.*",
+    "README.md": "docker-compose.yml, docker-compose.prod.yml, docker-compose.dev.yml, .env.example, Makefile, .gitignore, .gitattributes, .editorconfig"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}

@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# Beis HaMikdash Management System - Setup Script
+# Temple Management System - Setup Script
 # This script helps new developers get started quickly
 
 set -e  # Exit on any error
 
-echo "🏛️  Beis HaMikdash Management System Setup"
+echo "🏛️  Temple Management System Setup"
 echo "========================================"
 
 # Check if Docker is installed
@@ -149,4 +149,4 @@ echo "   - make test     # Run tests"
 echo ""
 echo "📚 For more commands, run: make help"
 echo ""
-echo "May the Third Beis HaMikdash be built speedily in our days! 🏛️"
+echo "May the Third Temple be built speedily in our days! 🏛️"

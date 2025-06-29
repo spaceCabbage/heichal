@@ -1,10 +1,10 @@
-# Beis HaMikdash Management System 🏛️
+# Temple Management System 🏛️
 
-A comprehensive fullstack application for managing all aspects of the Third Beis HaMikdash operations, built with Django (backend) and Vue.js (frontend) in a unified Docker container.
+A comprehensive fullstack application for managing all aspects of the Third Temple operations, built with Django (backend) and Vue.js (frontend) in a unified Docker container.
 
 ## 🎯 Project Vision
 
-An all-in-one digital platform to support the daily operations, scheduling, and management of the Third Beis HaMikdash, serving Cohanim, Leviim, and the Jewish people worldwide.
+An all-in-one digital platform to support the daily operations, scheduling, and management of the Third Temple, serving Cohanim, Leviim, and the Jewish people worldwide.
 
 ## 🏗️ Architecture
 
@@ -268,7 +268,7 @@ An all-in-one digital platform to support the daily operations, scheduling, and 
 ## 📦 Project Structure
 
 ```
-beis-hamikdash-system/
+temple/
 ├── server/                     # Django application
 │   ├── apps/
 │   │   ├── authentication/     # User management & JWT auth
@@ -320,7 +320,7 @@ beis-hamikdash-system/
 ```bash
 # 1. Clone the repository
 git clone <repository-url>
-cd beis-hamikdash-system
+cd temple
 
 # 2. Copy environment file and configure
 cp .env.example .env
@@ -642,6 +642,6 @@ This project is licensed under a custom license suitable for religious instituti
 
 ---
 
-**Note**: This system is designed to support the operations of the Third Beis HaMikdash when it is rebuilt, may it be speedily in our days. Until then, it serves as a comprehensive planning and educational tool.
+**Note**: This system is designed to support the operations of the Third Temple when it is rebuilt, may it be speedily in our days. Until then, it serves as a comprehensive planning and educational tool.
 
 *"And let them make Me a sanctuary, that I may dwell among them" - Exodus 25:8*

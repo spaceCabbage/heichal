@@ -1,4 +1,4 @@
-FROM node:18-alpine as build-stage
+FROM node:lts-alpine3.21 AS build-stage
 
 WORKDIR /app
 
@@ -15,7 +15,7 @@ COPY . .
 RUN npm run build
 
 # Production stage - minimal nginx setup or just file copying
-FROM alpine:latest as production-stage
+FROM alpine:latest AS production-stage
 
 WORKDIR /app
 
