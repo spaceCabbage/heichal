@@ -1,5 +1,9 @@
 בס"ד
 
+<div align="center">
+  <img src="https://raw.githubusercontent.com/spaceCabbage/heichal/master/client/public/sanctuary.svg" alt="Sanctuary" width="200"/>
+</div>
+
 # Heichal Management System
 The Official Digital Platform of the Beit HaMikdash
 
