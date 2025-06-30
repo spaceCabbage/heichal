@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
+from django.contrib.auth.admin import UserAdmin as BaseUserAdmin, GroupAdmin as BaseGroupAdmin
 from django.contrib.auth.models import Group
 
 from .models import User
@@ -68,3 +68,10 @@ class UserAdmin(BaseUserAdmin):
 
 
 admin.site.unregister(Group)
+
+
+class GroupAdmin(BaseGroupAdmin):
+    pass
+
+Group._meta.app_label = 'users'
+admin.site.register(Group, GroupAdmin)
