@@ -1,15 +1,17 @@
-Django
-djangorestframework
-psycopg2-binary
-dj-database-url
+Django==5.2.3
+djangorestframework==3.16.0
+psycopg2-binary==2.9.10
+dj-database-url==3.0.0
+whitenoise==6.9.0
+python-decouple==3.8
+django-cors-headers==4.7.0
+drf-spectacular==0.28.0
+pillow==11.2.1
+requests==2.32.4
+
 # djangorestframework-simplejwt
-django-cors-headers
-drf-spectacular
-Pillow
 # hijri-converter
-python-decouple 
 # django-phonenumber-field
 # phonenumbers
-requests
 # celery  # For background tasks
 # redis  # Message broker
