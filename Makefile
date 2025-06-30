@@ -80,8 +80,9 @@ migrate: ## Run server migrations
 makemigrations: ## Create server migrations
 	@docker compose exec server python manage.py makemigrations
 
-createsuperuser: ## Create server superuser
-	@docker compose exec server python manage.py createsuperuser
+cohengadol: ## Create server superuser
+	@echo "Creating Cohen Gadol account (superuser)"
+	@docker compose exec server python manage.py createsuperuser --username cohengadol
 
 dbshell: ## Access database shell
 	@docker compose exec postgres psql -U $(POSTGRES_USER) -d $(POSTGRES_DB)

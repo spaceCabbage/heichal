@@ -33,7 +33,7 @@ This comprehensive digital infrastructure serves as the official management syst
 - **Initial Purification Procedures**: Protocols for site preparation and initial kedushat haMakom
 - **Emergency Contact Registry**: Central coordination for global Jewish leadership
 - **Parah Adumah Status**: Current red heifer availability and preparation timeline
-- **Kohen Gadol Designation**: Official announcement and confirmation procedures
+- **Cohen Gadol Designation**: Official announcement and confirmation procedures
 
 ### 🔥 Immediate Service Priorities
 1. **Tamid Offering Restoration** - Daily morning and evening sacrifices
@@ -69,7 +69,7 @@ This comprehensive digital infrastructure serves as the official management syst
 - **Korban Procedure Certification** - Step-by-step sacrifice protocols for each offering type
 
 #### **Specialized Service Tracks**
-- **Kohen Gadol Preparation** - Advanced training for High Priest candidates
+- **Cohen Gadol Preparation** - Advanced training for High Priest candidates
 - **Yom Kippur Service Specialization** - Intensive preparation for holiest day
 - **Incense Service Certification** - Ketoret preparation and offering procedures
 - **Showbread Management** - Lechem HaPanim preparation and arrangement
@@ -84,7 +84,7 @@ This comprehensive digital infrastructure serves as the official management syst
 
 ### 🏆 Certification Levels
 
-#### **Basic Kohen Certification (Required for all Kohanim)**
+#### **Basic Cohen Certification (Required for all Kohanim)**
 - ✅ Genealogy verified and documented
 - ✅ Purity laws examination passed (95% minimum)
 - ✅ Basic korban procedures demonstrated
@@ -93,7 +93,7 @@ This comprehensive digital infrastructure serves as the official management syst
 - ✅ Emergency procedures training
 - ✅ **Estimated completion time: 6-8 weeks intensive study**
 
-#### **Service-Ready Kohen (Heichal Service Eligible)**
+#### **Service-Ready Cohen (Heichal Service Eligible)**
 - ✅ Basic certification completed
 - ✅ Practical korban demonstration with supervision
 - ✅ Technology systems training completed
@@ -101,7 +101,7 @@ This comprehensive digital infrastructure serves as the official management syst
 - ✅ Physical and spiritual fitness assessment
 - ✅ **Estimated additional time: 4-6 weeks practical training**
 
-#### **Senior Kohen (Teaching and Leadership)**
+#### **Senior Cohen (Teaching and Leadership)**
 - ✅ Service-ready certification with 1+ year experience
 - ✅ Advanced halachic studies completion
 - ✅ Teaching demonstration and evaluation
@@ -109,8 +109,8 @@ This comprehensive digital infrastructure serves as the official management syst
 - ✅ Specialized service certifications (minimum 3)
 - ✅ **Ongoing development with periodic recertification**
 
-#### **Kohen Gadol Preparation Track (High Priest Candidates)**
-- ✅ Senior Kohen certification with distinguished service record
+#### **Cohen Gadol Preparation Track (High Priest Candidates)**
+- ✅ Senior Cohen certification with distinguished service record
 - ✅ Advanced Yom Kippur service intensive (6-month preparation)
 - ✅ Leadership and crisis management certification
 - ✅ Public speaking and community representation training
@@ -134,7 +134,7 @@ This comprehensive digital infrastructure serves as the official management syst
 - **Emergency Simulation Labs** - Crisis response and emergency procedure training
 
 #### **Mentorship Program**
-- **Senior Kohen Advisors** - One-on-one guidance from experienced practitioners
+- **Senior Cohen Advisors** - One-on-one guidance from experienced practitioners
 - **Peer Study Groups** - Collaborative learning with fellow Kohanim
 - **Rabbinic Oversight** - Regular consultation with leading halachic authorities
 - **Community Integration** - Connection with local Jewish communities for support
