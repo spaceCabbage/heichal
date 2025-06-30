@@ -1,6 +1,5 @@
 .PHONY: help dev prod build up down logs shell migrate createsuperuser test clean
 
-# Load environment variables
 include .env
 export
 
@@ -33,11 +32,11 @@ prod-d: ## Start production environment in detached mode
 build: ## Build all images
 	@docker compose build
 
-build-django: ## Build only Django image
-	@docker compose build django
+build-server: ## Build only server image
+	@docker compose build server
 
-build-vue: ## Build only Vue image
-	@docker compose build vue
+build-client: ## Build only client image
+	@docker compose build client
 
 # Container management
 up: ## Start containers (use current ENVIRONMENT from .env)
@@ -53,11 +52,11 @@ restart: ## Restart all containers
 logs: ## Show all logs
 	@docker compose logs -f
 
-logs-django: ## Show Django logs
-	@docker compose logs -f django
+logs-server: ## Show server logs
+	@docker compose logs -f server
 
-logs-vue: ## Show Vue logs
-	@docker compose logs -f vue
+logs-client: ## Show client logs
+	@docker compose logs -f client
 
 logs-postgres: ## Show PostgreSQL logs
 	@docker compose logs -f postgres
@@ -66,31 +65,31 @@ logs-caddy: ## Show Caddy logs
 	@docker compose logs -f caddy
 
 # Database commands
-migrate: ## Run Django migrations
-	@docker compose exec django python manage.py migrate
+migrate: ## Run server migrations
+	@docker compose exec server python manage.py migrate
 
-makemigrations: ## Create Django migrations
-	@docker compose exec django python manage.py makemigrations
+makemigrations: ## Create server migrations
+	@docker compose exec server python manage.py makemigrations
 
-createsuperuser: ## Create Django superuser
-	@docker compose exec django python manage.py createsuperuser
+createsuperuser: ## Create server superuser
+	@docker compose exec server python manage.py createsuperuser
 
 dbshell: ## Access database shell
 	@docker compose exec postgres psql -U $(POSTGRES_USER) -d $(POSTGRES_DB)
 
 # Django management
-shell: ## Access Django shell
-	@docker compose exec django python manage.py shell
+shell: ## Access server shell
+	@docker compose exec server python manage.py shell
 
 collectstatic: ## Collect static files
-	@docker compose exec django python manage.py collectstatic --noinput
+	@docker compose exec server python manage.py collectstatic --noinput
 
 # Testing
 test: ## Run Django tests
-	@docker compose exec django python manage.py test
+	@docker compose exec server python manage.py test
 
-test-vue: ## Run Vue tests
-	@docker compose exec vue npm run test
+test-client: ## Run client tests
+	@docker compose exec client npm run test
 
 # Utility commands
 clean: ## Clean up containers, networks, and volumes
@@ -122,14 +121,14 @@ update-deps: ## Update dependencies
 	@echo "Updating Python dependencies..."
 	@docker compose exec django pip install -r requirements/dev.txt --upgrade
 	@echo "Updating Node dependencies..."
-	@docker compose exec vue npm update
+	@docker compose exec client npm update
 
 # Security and maintenance
 check-security: ## Run security checks
 	@echo "Running Django security checks..."
 	@docker compose exec django python manage.py check --deploy
 	@echo "Running npm security audit..."
-	@docker compose exec vue npm audit
+	@docker compose exec client npm audit
 
 update-requirements: ## Update Python requirements files
 	@echo "Updating requirements..."

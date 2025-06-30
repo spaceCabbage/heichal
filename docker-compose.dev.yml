@@ -1,6 +1,6 @@
 # Development overrides
-cservices:
-  serfver:
+services:
+  server:
     build:
       dockerfile: ../docker/server/Dockerfile.dev
     environment:

@@ -2,7 +2,7 @@
 services:
   server:
     build:
-      dockerfile: ../docker/server/Dockerfile.prod
+      dockerfile: ./docker/server/Dockerfile.prod
     environment:
       - DJANGO_DEBUG=false
     restart: unless-stopped
@@ -13,7 +13,7 @@ services:
 
   client:
     build:
-      dockerfile: ../docker/client/Dockerfile.prod
+      dockerfile: ./docker/client/Dockerfile.prod
     restart: unless-stopped
     command: >
       sh -c "npm run build &&
