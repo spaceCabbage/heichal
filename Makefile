@@ -11,11 +11,11 @@ help: ## Show this help message
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "  \033[36m%-15s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 
 # Development commands
-dev:
+dev: ## run full stack in dev mode
 	@echo "Starting development environment..."
 	@ENVIRONMENT=dev docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build
 
-dev-d: 
+dev-d:  ## run full stack in dev mode (detached)
 	@echo "Starting development environment (detached)..."
 	@ENVIRONMENT=dev docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build -d
 
@@ -37,6 +37,15 @@ build-server:
 
 build-client:
 	@docker compose build client
+
+build-no-cache: ## Build all containers without cache
+	@docker compose build --no-cache
+
+build-client-no-cache: ## Build client container without cache
+	@docker compose build --no-cache client
+
+build-server-no-cache: ## Build server container without cache
+	@docker compose build --no-cache server
 
 # Container management
 up:
