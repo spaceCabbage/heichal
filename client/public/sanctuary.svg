@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1000mm"
+   height="1000mm"
+   viewBox="0 0 1000 1000"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   sodipodi:docname="sanctuary.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.20268694"
+     inkscape:cx="1749.0027"
+     inkscape:cy="1697.1987"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       id="grid5"
+       units="mm"
+       originx="0"
+       originy="0"
+       spacingx="0.26458334"
+       spacingy="0.26458334"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="path34"
+       style="fill:none;stroke-width:6.35;stroke-linejoin:round;stroke:#ffffff;stroke-opacity:1;stroke-dasharray:none;stroke-linecap:round;paint-order:stroke fill markers"
+       d="M 224.99402 128.99574 L 224.99402 170.55858 L 774.90102 170.55858 L 774.90102 128.99574 L 224.99402 128.99574 z M 249.85038 182.10155 L 249.85038 223.66387 L 750.04517 223.66387 L 750.04517 182.10155 L 249.85038 182.10155 z M 224.99402 235.20683 L 224.99402 276.76967 L 774.90102 276.76967 L 774.90102 235.20683 L 224.99402 235.20683 z M 224.99402 287.353 L 224.99402 704.95904 L 194.29718 704.95904 L 194.29718 663.20138 L 57.160852 663.20138 L 57.160852 704.95904 L 57.160852 918.06903 L 194.29718 918.06903 L 805.70276 918.06903 L 942.83909 918.06903 L 942.83909 704.95904 L 942.83909 663.20138 L 805.70276 663.20138 L 805.70276 704.95904 L 775.00592 704.95904 L 775.00592 287.353 L 738.19473 287.353 L 738.19473 704.95904 L 727.97159 704.95904 L 727.97159 287.353 L 691.1604 287.353 L 691.1604 704.95904 L 680.93673 704.95904 L 680.93673 287.353 L 644.12554 287.353 L 644.12554 704.95904 L 571.54082 704.95904 L 571.54082 541.56281 L 571.54082 499.99997 L 534.72963 499.99997 L 465.27031 499.99997 L 428.45912 499.99997 L 428.45912 541.56281 L 428.45912 704.95904 L 355.8744 704.95904 L 355.8744 287.353 L 319.06321 287.353 L 319.06321 704.95904 L 308.83955 704.95904 L 308.83955 287.353 L 272.02836 287.353 L 272.02836 704.95904 L 261.80521 704.95904 L 261.80521 287.353 L 224.99402 287.353 z M 465.27031 541.56281 L 534.72963 541.56281 L 534.72963 704.95904 L 465.27031 704.95904 L 465.27031 541.56281 z " />
+  </g>
+</svg>
