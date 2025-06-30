@@ -19,7 +19,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### Testing & Quality
 - `make test` - Run Django tests
-- `make test-client` - Run Vue.js tests (via `npm run test`)
+- `make test-client` - Run Vue.js tests (Note: test runner not yet configured)
 - `cd client && npm run lint` - Run ESLint on Vue.js code
 - `cd client && npm run format` - Format Vue.js code with Prettier
 - `make check-security` - Run security checks for Django and npm
@@ -36,7 +36,10 @@ This is a **Temple Management System** with a Django REST API backend and Vue.js
 
 ### Tech Stack
 - **Backend**: Django 5.2 with Django REST Framework
-- **Frontend**: Vue.js 3 with Composition API, Vite, and Tailwind CSS
+- **Frontend**: Vue.js 3 with Composition API, Vite, and Tailwind CSS v4
+- **State Management**: Pinia with @pinia/colada for data fetching
+- **HTTP Client**: Axios with CSRF token handling
+- **Icons**: Phosphor Icons for Vue
 - **Database**: PostgreSQL (SQLite for development)
 - **Containerization**: Docker Compose with separate dev/prod configurations
 - **Reverse Proxy**: Caddy (production only)
@@ -45,11 +48,14 @@ This is a **Temple Management System** with a Django REST API backend and Vue.js
 ```
 temple/
 ├── server/           # Django backend
-│   ├── apps/         # Django apps (currently empty, ready for development)
+│   ├── apps/api/     # API app with health and info endpoints
 │   ├── core/         # Django settings and configuration
 │   └── requirements/ # Python dependencies (base.txt, dev.txt, prod.txt)
 ├── client/           # Vue.js frontend
-│   ├── src/          # Vue.js source code
+│   ├── src/
+│   │   ├── api/      # API client setup and query functions
+│   │   ├── components/ # Vue components (HealthStatus, ApiInfo)
+│   │   └── views/    # Page components (HomeView)
 │   └── package.json  # Node.js dependencies and scripts
 ├── docker/           # Docker configurations for different services
 ├── scripts/          # Utility scripts
@@ -69,11 +75,20 @@ temple/
 
 ### API Documentation
 - Django REST Framework with drf-spectacular for OpenAPI/Swagger documentation
-- API endpoints available at `/api/`
+- Current API endpoints:
+  - `GET /api/health/` - Health check with database connectivity
+  - `GET /api/info/` - API information and version details
 - Admin interface at `/admin/`
 
 ### Current State
-The project is in early development phase with basic Django and Vue.js setup. The architecture is prepared for the comprehensive temple management features outlined in the README.md, but most application logic is yet to be implemented.
+The project has a working foundation with:
+- Functional Django API with health check and info endpoints
+- Vue.js frontend displaying API status and information
+- Proper API client setup with CSRF protection and error handling
+- Pinia state management with data fetching capabilities
+- Basic UI components and routing structure
+
+The architecture is prepared for the comprehensive temple management features outlined in the README.md.
 
 ### Environment Variables
 Uses python-decouple for configuration management. Key variables include:

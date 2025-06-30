@@ -6,3 +6,15 @@ body {
   color: white;
   background-color: black;
 }
+
+h1 {
+  @apply text-4xl;
+}
+
+h2 {
+  @apply text-2xl;
+}
+
+h3 {
+  @apply text-xl;
+}

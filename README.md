@@ -120,6 +120,7 @@ make backup-db         # Backup database
 - [ ] Educational content about Temple service
 - [ ] Donation portal
 - [ ] Multi-language support (Hebrew, English, Aramaic)
+- [ ] Jewish terminology i18n with pronunciation variants (Ashkenazi/Sephardic)
 - [ ] Accessibility compliance
 - [ ] SEO optimization with meta tags
 - [ ] Contact information and directions
@@ -515,6 +516,7 @@ temple/
 - [ ] Educational content management
 - [ ] Event calendar for public
 - [ ] Multi-language support (Hebrew, English)
+- [ ] Jewish terminology i18n system (Ashkenazi/Sephardic pronunciations)
 - [ ] SEO optimization
 
 ### Week 25-26: Analytics & Reporting
