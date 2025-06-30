@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# Temple Management System - Setup Script
+# Heichal Management System - Setup Script
 # This script helps new developers get started quickly
 
 set -e  # Exit on any error
 
-echo "🏛️  Temple Management System Setup"
+echo "🏛️  Heichal Management System Setup"
 echo "========================================"
 
 # Check if Docker is installed
@@ -142,4 +142,4 @@ echo "   - make test     # Run tests"
 echo ""
 echo "📚 For more commands, run: make help"
 echo ""
-echo "May the Third Temple be built speedily in our days! 🏛️"
+echo "May the Heichal be built speedily in our days! 🏛️"

@@ -144,8 +144,8 @@ else:
     CORS_ALLOWED_ORIGINS = config("CORS_ALLOWED_ORIGINS", default="", cast=Csv())
 
 SPECTACULAR_SETTINGS = {
-    "TITLE": "Temple Management API",
-    "DESCRIPTION": "API for managing Third Temple operations",
+    "TITLE": "Heichal Management API",
+    "DESCRIPTION": "API for managing Heichal operations",
     "VERSION": "1.0.0",
     "SERVE_INCLUDE_SCHEMA": False,
 }

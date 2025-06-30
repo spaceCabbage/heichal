@@ -1,4 +1,4 @@
-name: Temple
+name: Heichal
 services:
   postgres:
     image: postgres:15-alpine

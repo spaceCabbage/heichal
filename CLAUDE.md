@@ -32,7 +32,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Architecture Overview
 
-This is a **Temple Management System** with a Django REST API backend and Vue.js frontend, designed to support Third Temple operations.
+This is a **Heichal Management System** with a Django REST API backend and Vue.js frontend, designed to support Heichal operations.
 
 ### Tech Stack
 - **Backend**: Django 5.2 with Django REST Framework
@@ -46,7 +46,7 @@ This is a **Temple Management System** with a Django REST API backend and Vue.js
 
 ### Project Structure
 ```
-temple/
+heichal/
 ├── server/           # Django backend
 │   ├── apps/api/     # API app with health and info endpoints
 │   ├── core/         # Django settings and configuration
@@ -88,7 +88,7 @@ The project has a working foundation with:
 - Pinia state management with data fetching capabilities
 - Basic UI components and routing structure
 
-The architecture is prepared for the comprehensive temple management features outlined in the README.md.
+The architecture is prepared for the comprehensive heichal management features outlined in the README.md.
 
 ### Environment Variables
 Uses python-decouple for configuration management. Key variables include:

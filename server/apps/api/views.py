@@ -63,10 +63,10 @@ def api_info(request):
 
     return Response(
         {
-            "name": "Temple Management API",
+            "name": "Heichal Management API",
             "version": "1.0.0",
             "environment": getattr(settings, "ENVIRONMENT", "unknown"),
             "debug": settings.DEBUG,
-            "description": "API for managing Third Temple operations",
+            "description": "API for managing Heichal operations",
         }
     )

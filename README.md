@@ -1,13 +1,13 @@
 בס"ד
 
-# Third Temple Management System
+# Heichal Management System
 The Official Digital Platform of the Beit HaMikdash
 
 "And let them make Me a sanctuary, that I may dwell among them" - Exodus 25:8
 
 **Awaiting Official Authorization by the Sanhedrin • Developed in accordance with Halacha**
 
-This comprehensive digital infrastructure serves as the official management system for all operations of the Beit HaMikdash, facilitating the sacred service of the Kohanim and Levi'im while providing the Jewish people worldwide with seamless access to Temple services, korbanot, and spiritual connection to the Makom HaMikdash.
+This comprehensive digital infrastructure serves as the official management system for all operations of the Beit HaMikdash, facilitating the sacred service of the Kohanim and Levi'im while providing the Jewish people worldwide with seamless access to Heichal services, korbanot, and spiritual connection to the Makom HaMikdash.
 
 - [📢 Post-Geulah Critical Information Center](#-post-geulah-critical-information-center)
 - [🎓 Kohanim Training \& Certification Center](#-kohanim-training--certification-center)
@@ -29,7 +29,7 @@ This comprehensive digital infrastructure serves as the official management syst
 ### 🚨 IMMEDIATE POST-MASHIACH PROTOCOLS
 
 **URGENT: First 24 Hours After Geulah**
-- **Temple Location Confirmation**: Official announcement of exact Temple site location
+- **Heichal Location Confirmation**: Official announcement of exact Heichal site location
 - **Initial Purification Procedures**: Protocols for site preparation and initial kedushat haMakom
 - **Emergency Contact Registry**: Central coordination for global Jewish leadership
 - **Parah Adumah Status**: Current red heifer availability and preparation timeline
@@ -45,12 +45,12 @@ This comprehensive digital infrastructure serves as the official management syst
 - **Register in the system** using your Hebrew name and tribal affiliation
 - **Verify genealogy** through the integrated genealogy databases
 - **Check financial obligations** - half-shekel, outstanding vows, korban commitments
-- **Review purity status** - tumah/taharah requirements for Temple access
+- **Review purity status** - tumah/taharah requirements for Heichal access
 - **Confirm travel arrangements** - pilgrimage planning and coordination
 
-### 🏛️ Temple Access Protocols
+### 🏛️ Heichal Access Protocols
 - **Initial access restrictions** during construction/preparation phases
-- **Security clearance procedures** for Temple Mount entry
+- **Security clearance procedures** for Heichal Mount entry
 - **Health and purity requirements** for all visitors
 - **Dress code enforcement** according to hilchot Beit HaMikdash
 - **Guided tour scheduling** for initial orientation
@@ -65,7 +65,7 @@ This comprehensive digital infrastructure serves as the official management syst
 - **Lineage Verification Course** - Documenting and confirming Kohanic ancestry
 - **Purity Laws Intensive** - Tumah/Taharah, mikvah protocols, waiting periods
 - **Sacred Garments Training** - Bigdei Kehunah fitting, care, and halachic requirements
-- **Temple Geography Mastery** - Azarah layout, sacred spaces, boundary laws
+- **Heichal Geography Mastery** - Azarah layout, sacred spaces, boundary laws
 - **Korban Procedure Certification** - Step-by-step sacrifice protocols for each offering type
 
 #### **Specialized Service Tracks**
@@ -88,12 +88,12 @@ This comprehensive digital infrastructure serves as the official management syst
 - ✅ Genealogy verified and documented
 - ✅ Purity laws examination passed (95% minimum)
 - ✅ Basic korban procedures demonstrated
-- ✅ Temple geography test completed
+- ✅ Heichal geography test completed
 - ✅ Sacred garments fitting and care training
 - ✅ Emergency procedures training
 - ✅ **Estimated completion time: 6-8 weeks intensive study**
 
-#### **Service-Ready Kohen (Temple Service Eligible)**
+#### **Service-Ready Kohen (Heichal Service Eligible)**
 - ✅ Basic certification completed
 - ✅ Practical korban demonstration with supervision
 - ✅ Technology systems training completed
@@ -121,13 +121,13 @@ This comprehensive digital infrastructure serves as the official management syst
 
 #### **Digital Learning Platform**
 - **Interactive Halacha Modules** - Step-by-step guided learning with multimedia
-- **Virtual Reality Temple Tours** - Immersive exploration of Temple layout and procedures
+- **Virtual Reality Heichal Tours** - Immersive exploration of Heichal layout and procedures
 - **Augmented Reality Korban Training** - Practice procedures with digital overlay guidance
 - **Video Library** - Demonstrations by leading rabbinical authorities
 - **Assessment System** - Regular testing with immediate feedback and remediation
 
 #### **Practical Training Facilities**
-- **Mock Temple Setup** - Full-scale replica for hands-on practice
+- **Mock Heichal Setup** - Full-scale replica for hands-on practice
 - **Animal Training Center** - Live practice with kosher animals under supervision
 - **Garment Fitting Centers** - Proper measurement and fitting of sacred vestments
 - **Purity Training Facilities** - Mikvah protocols and purification procedures
@@ -150,7 +150,7 @@ This comprehensive digital infrastructure serves as the official management syst
 - **Emergency Fast-Track** - Accelerated 4-6 week program for immediate needs
 
 #### **Global Training Centers**
-- **Jerusalem Primary Campus** - Main training facility near Temple site
+- **Jerusalem Primary Campus** - Main training facility near Heichal site
 - **Regional Centers** - Major Jewish population centers worldwide
 - **Online Learning Platform** - Accessible from anywhere with internet
 - **Mobile Training Units** - Outreach to smaller Jewish communities
@@ -166,7 +166,7 @@ This comprehensive digital infrastructure serves as the official management syst
 - **Community Service Hours** - Teaching and mentoring newer Kohanim
 
 #### **Specialized Continuing Education**
-- **Advanced Halachic Studies** - Deep dive into complex Temple law topics
+- **Advanced Halachic Studies** - Deep dive into complex Heichal law topics
 - **Leadership Development** - Management and organizational skills
 - **Interfaith Relations** - Representing Judaism in diverse contexts
 - **Modern Technology Integration** - Adapting ancient practices to contemporary tools
@@ -181,14 +181,14 @@ This comprehensive digital infrastructure serves as the official management syst
 ### Prerequisites
 - Docker and Docker Compose
 - Git
-- Proper security clearance for Temple operations
-- Familiarity with relevant halachot regarding Temple service
+- Proper security clearance for Heichal operations
+- Familiarity with relevant halachot regarding Heichal service
 
 ### Quick Start
 ```bash
 # 1. Clone the repository
-git clone https://github.com/spaceCabbage/temple
-cd temple
+git clone https://github.com/spaceCabbage/heichal
+cd heichal
 
 # 2. Copy environment file and configure
 cp .env.example .env
@@ -255,14 +255,14 @@ This platform adheres to the highest standards of security, reliability, and hal
 ### Core Infrastructure
 - **Backend**: Django (Python) with REST API (/server) - Handles all sacred data and business logic
 - **Frontend**: Vue.js 3 with TypeScript + Vite (/client) - Provides intuitive interfaces for all users
-- **Database**: PostgreSQL - Secure, ACID-compliant storage for all Temple records
+- **Database**: PostgreSQL - Secure, ACID-compliant storage for all Heichal records
 - **Security Layer**: Caddy with SSL termination and advanced security headers
 - **UI Framework**: Tailwind CSS + Phosphor Icons - Clean, accessible design
 - **Deployment**: Docker Compose with separate sacred/development environments
 
 ### Access Points:
 - `/` - Public interface and authenticated user portals
-- `/api/*` - Secure API endpoints for all Temple operations
+- `/api/*` - Secure API endpoints for all Heichal operations
 - `/admin/*` - Administrative interface (Restricted to authorized personnel)
 
 ---
@@ -270,12 +270,12 @@ This platform adheres to the highest standards of security, reliability, and hal
 ## 📋 Service Modules
 
 ### 🕍 Beit HaMikdash Public Portal
-- ✅ Official Temple information and historical documentation
-- ✅ Current announcements and Temple status updates
-- ✅ Live broadcasting of Temple services and ceremonies
-- ✅ Visitor protocols and Temple Mount access guidelines
-- ✅ Educational resources on Temple service and halachot
-- ✅ Donation and Temple support portal
+- ✅ Official Heichal information and historical documentation
+- ✅ Current announcements and Heichal status updates
+- ✅ Live broadcasting of Heichal services and ceremonies
+- ✅ Visitor protocols and Heichal Mount access guidelines
+- ✅ Educational resources on Heichal service and halachot
+- ✅ Donation and Heichal support portal
 - ✅ Multi-language support (Hebrew, English, Aramaic)
 - ✅ Jewish terminology with Ashkenazi/Sephardic pronunciation options
 - ✅ Full accessibility compliance (ADA/Israeli standards)
@@ -314,7 +314,7 @@ This platform adheres to the highest standards of security, reliability, and hal
 - ✅ Halachic training and certification verification
 - ✅ Service performance documentation and evaluation
 - ✅ Taharat HaKohanim status monitoring (Tumah/Taharah)
-- ✅ Emergency contact protocols for Temple staff
+- ✅ Emergency contact protocols for Heichal staff
 - ✅ Bigdei Kehunah (priestly garments) inventory and assignments
 - ✅ Yichus (genealogical) verification and documentation
 - ✅ Automated duty notifications and schedule updates
@@ -322,20 +322,20 @@ This platform adheres to the highest standards of security, reliability, and hal
 - ✅ Specialized service skills tracking (e.g., Yom Kippur service)
 
 ### 🎼 Levi'im Service Coordination
-- ✅ Shirah (Temple song) service scheduling and assignments
+- ✅ Shirah (Heichal song) service scheduling and assignments
 - ✅ Klei Shir (musical instruments) allocation and maintenance
 - ✅ Machlakot (Levitical divisions) practice coordination
 - ✅ Traditional nusach and melody preservation database
 - ✅ Voice part assignments according to Levitical families
 - ✅ Service quality assessment and improvement tracking
 - ✅ Musical halacha and tradition educational resources
-- ✅ Digital archives of Temple music recordings and practice materials
-- ✅ Historical Temple music preservation and research
+- ✅ Digital archives of Heichal music recordings and practice materials
+- ✅ Historical Heichal music preservation and research
 - ✅ Coordination with visiting choirs and musicians
-- ✅ Sound amplification system management for Temple acoustics
+- ✅ Sound amplification system management for Heichal acoustics
 - ✅ Practice space allocation and scheduling
 
-### 📅 Temple Calendar & Events
+### 📅 Heichal Calendar & Events
 - ✅ Hebrew calendar integration
 - ✅ Holiday and festival scheduling
 - ✅ Special service planning
@@ -391,7 +391,7 @@ This platform adheres to the highest standards of security, reliability, and hal
 - ✅ Treasurer dashboard
 - ✅ Financial forecasting
 
-### 🔄 Temple Operations
+### 🔄 Heichal Operations
 - ✅ Daily service checklist systems
 - ✅ Equipment maintenance scheduling
 - ✅ Cleaning and preparation workflows
@@ -520,7 +520,7 @@ PostgreSQL with custom schemas for:
 ## 📦 Project Structure
 
 ```
-temple/
+heichal/
 ├── server/                     # Django application
 │   ├── apps/
 │   │   ├── authentication/     # User management & JWT auth
@@ -647,7 +647,7 @@ temple/
 - ✅ Performance evaluation system
 - ✅ Training and certification tracking
 
-### 🏛️ Phase 4: Temple Operations (Weeks 17-22)
+### 🏛️ Phase 4: Heichal Operations (Weeks 17-22)
 **Goal**: Daily operations and resource management
 
 **Week 17-18: Inventory Management**
@@ -675,7 +675,7 @@ temple/
 **Goal**: Public-facing features and system intelligence
 
 **Week 23-24: Landing Page & Public Features**
-- ✅ Modern landing page with temple information
+- ✅ Modern landing page with heichal information
 - ✅ Educational content management
 - ✅ Event calendar for public
 - ✅ Multi-language support (Hebrew, English)
@@ -766,13 +766,13 @@ temple/
 
 ## 📜 Official Declaration
 
-This Sacred Management System has been developed under the auspices of the Sanhedrin and in accordance with the halachic requirements for Temple operations. The system embodies centuries of Jewish law, tradition, and the divine commandments regarding the service of the Beit HaMikdash.
+This Sacred Management System has been developed under the auspices of the Sanhedrin and in accordance with the halachic requirements for Heichal operations. The system embodies centuries of Jewish law, tradition, and the divine commandments regarding the service of the Beit HaMikdash.
 
 ### Halachic Compliance Statement
-All functionalities within this system have been reviewed and approved by leading poskim and are designed to facilitate, not replace, the sacred human elements of Temple service. The system serves as a tool to enhance the kavod (honor) and efficiency of Temple operations while maintaining strict adherence to halacha.
+All functionalities within this system have been reviewed and approved by leading poskim and are designed to facilitate, not replace, the sacred human elements of Heichal service. The system serves as a tool to enhance the kavod (honor) and efficiency of Heichal operations while maintaining strict adherence to halacha.
 
 ### Security & Sacred Data
-This platform employs the highest levels of digital security befitting the sanctity of Temple operations. All data is encrypted, access is strictly controlled, and usage is logged for security and halachic accountability.
+This platform employs the highest levels of digital security befitting the sanctity of Heichal operations. All data is encrypted, access is strictly controlled, and usage is logged for security and halachic accountability.
 
 ---
 
