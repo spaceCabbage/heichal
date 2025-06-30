@@ -11,41 +11,41 @@ help: ## Show this help message
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "  \033[36m%-15s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 
 # Development commands
-dev: ## Start development environment
+dev:
 	@echo "Starting development environment..."
 	@ENVIRONMENT=dev docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build
 
-dev-d: ## Start development environment in detached mode
+dev-d: 
 	@echo "Starting development environment (detached)..."
 	@ENVIRONMENT=dev docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build -d
 
 # Production commands
-prod: ## Start production environment
+prod:
 	@echo "Starting production environment..."
 	@ENVIRONMENT=prod docker compose -f docker-compose.yml -f docker-compose.prod.yml --profile prod up --build
 
-prod-d: ## Start production environment in detached mode
+prod-d:
 	@echo "Starting production environment (detached)..."
 	@ENVIRONMENT=prod docker compose -f docker-compose.yml -f docker-compose.prod.yml --profile prod up --build -d
 
 # Build commands
-build: ## Build all images
+build:
 	@docker compose build
 
-build-server: ## Build only server image
+build-server:
 	@docker compose build server
 
-build-client: ## Build only client image
+build-client:
 	@docker compose build client
 
 # Container management
-up: ## Start containers (use current ENVIRONMENT from .env)
+up:
 	@docker compose up -d
 
-down: ## Stop all containers
+down:
 	@docker compose down
 
-restart: ## Restart all containers
+restart:
 	@docker compose restart
 
 # Logs
@@ -85,10 +85,10 @@ collectstatic: ## Collect static files
 	@docker compose exec server python manage.py collectstatic --noinput
 
 # Testing
-test: ## Run Django tests
+test:
 	@docker compose exec server python manage.py test
 
-test-client: ## Run client tests
+test-client:
 	@docker compose exec client npm run test
 
 # Utility commands
