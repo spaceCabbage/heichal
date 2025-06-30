@@ -3,6 +3,14 @@
     "Vue.volar",
     "dbaeumer.vscode-eslint",
     "EditorConfig.EditorConfig",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "tomphilbin.gruvbox-themes",
+    "ms-python.isort",
+    "yzhang.markdown-all-in-one",
+    "donjayamanne.python-extension-pack",
+    "wayou.vscode-todo-highlight",
+    "Gruntfuggly.todo-tree",
+    "bradlc.vscode-tailwindcss",
+    "bourhaouta.tailwindshades"
   ]
 }
