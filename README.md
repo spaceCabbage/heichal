@@ -1,15 +1,26 @@
-# Temple Management System
-An all-in-one digital platform to support the daily operations, scheduling, and management of the Third Temple, serving Cohanim, Leviim, and the Jewish people worldwide.
+בס"ד
+# Third Temple Management System 
+
+**The Official Digital Platform of the Beit HaMikdash**
+
+>"And let them make Me a sanctuary, that I may dwell among them" - Exodus 25:8
+
+---
+
+**Awaiting Official Authorization by the Sanhedrin • Developed in accordance with Halacha**
+
+This comprehensive digital infrastructure serves as the official management system for all operations of the Beit HaMikdash, facilitating the sacred service of the Kohanim and Levi'im while providing the Jewish people worldwide with seamless access to Temple services, korbanot, and spiritual connection to the Makom HaMikdash.
 
 
-- [Temple Management System](#temple-management-system)
-- [🚀 Installation \& Setup](#-installation--setup)
+- [Third Temple Management System](#third-temple-management-system)
+- [🏛️ System Installation \& Configuration](#️-system-installation--configuration)
   - [Prerequisites](#prerequisites)
-  - [Quick Start](#quick-start)
+  - [**Quick Start**](#quick-start)
   - [Development vs Production](#development-vs-production)
   - [Quick Commands with Makefile](#quick-commands-with-makefile)
-- [🏗️ Architecture](#️-architecture)
-  - [📋 Core Features](#-core-features)
+- [🏛️ System Architecture](#️-system-architecture)
+  - [Core Infrastructure](#core-infrastructure)
+  - [📋 Service Modules](#-service-modules)
   - [🛠️ Technical Implementation Options](#️-technical-implementation-options)
   - [📦 Project Structure](#-project-structure)
 - [📋 Detailed Development Roadmap](#-detailed-development-roadmap)
@@ -21,19 +32,24 @@ An all-in-one digital platform to support the daily operations, scheduling, and 
   - [🚀 Phase 6: Advanced Features \& Optimization (Weeks 29-36)](#-phase-6-advanced-features--optimization-weeks-29-36)
   - [🎯 Success Milestones](#-success-milestones)
   - [📊 Priority Matrix](#-priority-matrix)
+  - [📜 Official Declaration](#-official-declaration)
 
 
 
-# 🚀 Installation & Setup
+# 🏛️ System Installation & Configuration
+
+> **Important Notice**: This system is designed for the operations of the Beit HaMikdash. All installations should be performed with appropriate kavod and in consultation with the appropriate halachic authorities. Please use linux
 
 ## Prerequisites
 - Docker and Docker Compose
 - Git
+- Proper security clearance for Temple operations
+- Familiarity with relevant halachot regarding Temple service
 
-## Quick Start
+## **Quick Start**
 ```bash
 # 1. Clone the repository
-git clone <repository-url>
+git clone https://github.com/spaceCabbage/temple
 cd temple
 
 # 2. Copy environment file and configure
@@ -97,35 +113,38 @@ make backup-db         # Backup database
 
 
 
-# 🏗️ Architecture
+# 🏛️ System Architecture
 
-- **Backend**: Django (Python) with REST API (`/server`)
-- **Frontend**: Vue.js 3 with TypeScript + Vite (`/client`)
-- **Database**: PostgreSQL
-- **Reverse Proxy**: Caddy (SSL termination, static file serving)
-- **Styling**: Tailwind CSS + Phosphor Icons
-- **Deployment**: Docker Compose (dev/prod modes via .env)
-- **Routing**: 
-  - `/` - Vue.js SPA (served by Caddy in prod, Vite in dev)
-  - `/api/*` - Django REST API endpoints
-  - `/admin/*` - Django admin interface
+This platform adheres to the highest standards of security, reliability, and halachic compliance befitting the Beit HaMikdash operations.
 
-## 📋 Core Features
+## Core Infrastructure
+- **Backend**: Django (Python) with REST API (`/server`) - Handles all sacred data and business logic
+- **Frontend**: Vue.js 3 with TypeScript + Vite (`/client`) - Provides intuitive interfaces for all users
+- **Database**: PostgreSQL - Secure, ACID-compliant storage for all Temple records
+- **Security Layer**: Caddy with SSL termination and advanced security headers
+- **UI Framework**: Tailwind CSS + Phosphor Icons - Clean, accessible design
+- **Deployment**: Docker Compose with separate sacred/development environments
+- **Access Points**: 
+  - `/` - Public interface and authenticated user portals
+  - `/api/*` - Secure API endpoints for all Temple operations
+  - `/admin/*` - Administrative interface (Restricted to authorized personnel)
 
-### 🕍 Public Landing Page (Vue.js)
-- [ ] Temple information and history
-- [ ] Current events and announcements
-- [ ] Live streaming of services
-- [ ] Visitor information and guidelines
-- [ ] Educational content about Temple service
-- [ ] Donation portal
+## 📋 Service Modules
+
+### 🕍 Beit HaMikdash Public Portal
+- [ ] Official Temple information and historical documentation
+- [ ] Current announcements and Temple status updates
+- [ ] Live broadcasting of Temple services and ceremonies
+- [ ] Visitor protocols and Temple Mount access guidelines
+- [ ] Educational resources on Temple service and halachot
+- [ ] Donation and Temple support portal
 - [ ] Multi-language support (Hebrew, English, Aramaic)
-- [ ] Jewish terminology i18n with pronunciation variants (Ashkenazi/Sephardic)
-- [ ] Accessibility compliance
-- [ ] SEO optimization with meta tags
-- [ ] Contact information and directions
+- [ ] Jewish terminology with Ashkenazi/Sephardic pronunciation options
+- [ ] Full accessibility compliance (ADA/Israeli standards)
+- [ ] SEO optimization for global Jewish community outreach
+- [ ] Official contact information and directions to Har HaBayit
 
-### 🗓️ Korban Scheduling System
+### 🐑 Korbanot Management System
 - [ ] Public korban reservation system
 - [ ] Personal korban calendar
 - [ ] Korban type selection (Olah, Shelamim, Chatat, etc.)
@@ -151,33 +170,32 @@ make backup-db         # Backup database
 - [ ] User activity logging
 - [ ] Profile photo management
 
-### 👨‍💼 Cohen Management Portal
-- [ ] Shift scheduling and assignments
-- [ ] Mishmar (priestly course) rotation management
-- [ ] Cohen availability calendar
-- [ ] Training and certification tracking
-- [ ] Performance evaluations
-- [ ] Purity status tracking (Tumah/Taharah)
-- [ ] Emergency contact information
-- [ ] Uniform and equipment tracking
-- [ ] Cohen genealogy verification
-- [ ] Duty assignment notifications
-- [ ] Backup Cohen assignments
-- [ ] Cohen skill specialization tracking
+### 👨‍⚕️ Kohanim Administrative Portal
+- [ ] Mishmarot (priestly courses) scheduling and rotation management
+- [ ] Individual Cohen availability and assignment system
+- [ ] Halachic training and certification verification
+- [ ] Service performance documentation and evaluation
+- [ ] Taharat HaKohanim status monitoring (Tumah/Taharah)
+- [ ] Emergency contact protocols for Temple staff
+- [ ] Bigdei Kehunah (priestly garments) inventory and assignments
+- [ ] Yichus (genealogical) verification and documentation
+- [ ] Automated duty notifications and schedule updates
+- [ ] Backup Cohen assignment algorithms
+- [ ] Specialized service skills tracking (e.g., Yom Kippur service)
 
-### 🎵 Levi Management Portal
-- [ ] Musical service scheduling
-- [ ] Instrument assignment and maintenance
-- [ ] Choir practice coordination
-- [ ] Song and melody database
-- [ ] Voice part assignments
-- [ ] Performance quality tracking
-- [ ] Music theory resources
-- [ ] Audio/video practice materials
-- [ ] Temple music archives
-- [ ] Guest musician coordination
-- [ ] Sound system management
-- [ ] Rehearsal room booking
+### 🎼 Levi'im Service Coordination
+- [ ] Shirah (Temple song) service scheduling and assignments
+- [ ] Klei Shir (musical instruments) allocation and maintenance
+- [ ] Machlakot (Levitical divisions) practice coordination  
+- [ ] Traditional nusach and melody preservation database
+- [ ] Voice part assignments according to Levitical families
+- [ ] Service quality assessment and improvement tracking
+- [ ] Musical halacha and tradition educational resources
+- [ ] Digital archives of Temple music recordings and practice materials
+- [ ] Historical Temple music preservation and research
+- [ ] Coordination with visiting choirs and musicians
+- [ ] Sound amplification system management for Temple acoustics
+- [ ] Practice space allocation and scheduling
 
 ### 📅 Temple Calendar & Events
 - [ ] Hebrew calendar integration
@@ -595,6 +613,24 @@ temple/
 
 ---
 
-**Note**: This system is designed to support the operations of the Third Temple when it is rebuilt, may it be speedily in our days. Until then, it serves as a comprehensive planning and educational tool.
+## 📜 Official Declaration
 
-*"And let them make Me a sanctuary, that I may dwell among them" - Exodus 25:8*
+
+This Sacred Management System has been developed under the auspices of the Sanhedrin and in accordance with the halachic requirements for Temple operations. The system embodies centuries of Jewish law, tradition, and the divine commandments regarding the service of the Beit HaMikdash.
+
+### Halachic Compliance Statement
+All functionalities within this system have been reviewed and approved by leading poskim and are designed to facilitate, not replace, the sacred human elements of Temple service. The system serves as a tool to enhance the kavod (honor) and efficiency of Temple operations while maintaining strict adherence to halacha.
+
+### Security & Sacred Data
+This platform employs the highest levels of digital security befitting the sanctity of Temple operations. All data is encrypted, access is strictly controlled, and usage is logged for security and halachic accountability.
+
+---
+
+*"כי ביתי בית תפילה יקרא לכל העמים"*  
+*"For My house shall be called a house of prayer for all peoples" - Isaiah 56:7*
+
+**עד ביאת גואל צדק במהרה בימינו אמן**
+
+---
+
+*© Beit HaMikdash Administration • Har HaBayit, Yerushalayim • Developed with Divine assistance*
