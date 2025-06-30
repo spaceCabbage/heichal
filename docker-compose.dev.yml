@@ -1,8 +1,8 @@
 # Development overrides
 cservices:
-  django:
+  serfver:
     build:
-      dockerfile: ../docker/django/Dockerfile.dev
+      dockerfile: ../docker/server/Dockerfile.dev
     environment:
       - DJANGO_DEBUG=true
     volumes:
@@ -11,9 +11,9 @@ cservices:
       sh -c "python manage.py migrate &&
              python manage.py runserver 0.0.0.0:8000"
 
-  vue:
+  client:
     build:
-      dockerfile: ../docker/vue/Dockerfile.dev
+      dockerfile: ../docker/client/Dockerfile.dev
     volumes:
       - ./client:/app
       - /app/node_modules

@@ -34,15 +34,8 @@ if [ ! -f .env ]; then
         JWT_SECRET=$(openssl rand -base64 32)
         
         # Replace placeholder keys in .env file
-        if [[ "$OSTYPE" == "darwin"* ]]; then
-            # macOS
-            sed -i '' "s/your-super-secret-django-key-generate-a-new-one-please/$DJANGO_SECRET/" .env
-            sed -i '' "s/another-super-secret-key-for-jwt-tokens/$JWT_SECRET/" .env
-        else
-            # Linux
-            sed -i "s/your-super-secret-django-key-generate-a-new-one-please/$DJANGO_SECRET/" .env
-            sed -i "s/another-super-secret-key-for-jwt-tokens/$JWT_SECRET/" .env
-        fi
+        sed -i "s/your-super-secret-django-key-generate-a-new-one-please/$DJANGO_SECRET/" .env
+        sed -i "s/another-super-secret-key-for-jwt-tokens/$JWT_SECRET/" .env
         
         echo "✅ Secret keys generated and updated in .env file"
     else

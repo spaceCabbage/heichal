@@ -15,10 +15,10 @@ services:
       timeout: 5s
       retries: 5
 
-  django:
+  server:
     build:
       context: ./server
-      dockerfile: ../docker/django/Dockerfile.${ENVIRONMENT:-dev}
+      dockerfile: ../docker/server/Dockerfile.${ENVIRONMENT:-dev}
     environment:
       - DATABASE_URL=${DATABASE_URL}
       - DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY}
@@ -27,8 +27,8 @@ services:
       - ENVIRONMENT=${ENVIRONMENT:-dev}
     volumes:
       - ./server:/app
-      - django_static:/app/staticfiles
-      - django_media:/app/media
+      - server_static:/app/staticfiles
+      - server_media:/app/media
     ports:
       - '8000:8000'
     depends_on:
@@ -39,21 +39,21 @@ services:
              python manage.py collectstatic --noinput &&
              python manage.py runserver 0.0.0.0:8000"
 
-  vue:
+  client:
     build:
       context: ./client
-      dockerfile: ../docker/vue/Dockerfile.${ENVIRONMENT:-dev}
+      dockerfile: ../docker/client/Dockerfile.${ENVIRONMENT:-dev}
     environment:
       - VITE_API_URL=${VITE_API_URL:-http://localhost:8000}
       - ENVIRONMENT=${ENVIRONMENT:-dev}
     volumes:
       - ./client:/app
       - /app/node_modules
-      - vue_dist:/app/dist
+      - client_dist:/app/dist
     ports:
       - '3000:3000'
     depends_on:
-      - django
+      - server
 
   caddy:
     image: caddy:2-alpine
@@ -64,22 +64,22 @@ services:
       - ./docker/caddy/Caddyfile:/etc/caddy/Caddyfile
       - caddy_data:/data
       - caddy_config:/config
-      - vue_dist:/var/www/html
-      - django_static:/var/www/static
-      - django_media:/var/www/media
+      - client_dist:/var/www/html
+      - server_static:/var/www/static
+      - server_media:/var/www/media
     environment:
       - DOMAIN=${DOMAIN:-localhost}
       - ENVIRONMENT=${ENVIRONMENT:-dev}
     depends_on:
-      - django
-      - vue
+      - server
+      - client
     profiles:
       - prod
 
 volumes:
   postgres_data:
-  django_static:
-  django_media:
-  vue_dist:
+  server_static:
+  server_media:
+  client_dist:
   caddy_data:
   caddy_config:

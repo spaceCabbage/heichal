@@ -1,8 +1,8 @@
 # Production overrides
 services:
-  django:
+  server:
     build:
-      dockerfile: ../docker/django/Dockerfile.prod
+      dockerfile: ../docker/server/Dockerfile.prod
     environment:
       - DJANGO_DEBUG=false
     restart: unless-stopped
@@ -11,9 +11,9 @@ services:
              python manage.py collectstatic --noinput &&
              gunicorn core.wsgi:application --bind 0.0.0.0:8000 --workers 3"
 
-  vue:
+  client:
     build:
-      dockerfile: ../docker/vue/Dockerfile.prod
+      dockerfile: ../docker/client/Dockerfile.prod
     restart: unless-stopped
     command: >
       sh -c "npm run build &&
